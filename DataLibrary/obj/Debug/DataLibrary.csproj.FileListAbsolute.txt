@@ -1,0 +1,10 @@
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\DataLibrary.dll.config
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\DataLibrary.dll
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\DataLibrary.pdb
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\EntityFramework.dll
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\EntityFramework.xml
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\obj\Debug\DataLibrary.csprojResolveAssemblyReference.cache
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\obj\Debug\DataLibrary.dll
+c:\users\andreeaflorina\documents\visual studio 2015\Projects\SmartHomeProject\DataLibrary\obj\Debug\DataLibrary.pdb

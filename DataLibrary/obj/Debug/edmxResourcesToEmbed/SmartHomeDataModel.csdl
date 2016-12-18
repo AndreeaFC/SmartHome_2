@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="SmartHomeDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="SmartHomeDataModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HouseAreas" EntityType="SmartHomeDataModel.HouseArea" />
+  </EntityContainer>
+  <EntityType Name="HouseArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LightsOn" Type="Boolean" />
+    <Property Name="FloorHeating" Type="Boolean" />
+    <Property Name="Alarm" Type="Boolean" />
+  </EntityType>
+</Schema>
