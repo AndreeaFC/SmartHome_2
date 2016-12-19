@@ -35,7 +35,7 @@ namespace SmartHomeProject.Hubs
                         Clients.All.LightsOn(room, status);
                     }
 
-                    await Task.Delay(3000);
+                    await Task.Delay(5000);
                 }
             }, 
 

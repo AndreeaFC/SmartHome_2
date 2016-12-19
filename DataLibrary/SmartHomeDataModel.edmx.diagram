@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="cb73ffc5edb94925a43e44ce72d91685" Name="Diagram1" >
-        <EntityTypeShape EntityType="SmartHomeDataModel.HouseArea" Width="1.5" PointX="4.25" PointY="1.25" />
+        <EntityTypeShape EntityType="SmartHomeDataModel.HouseArea" Width="1.5" PointX="3" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -17,9 +17,11 @@ namespace SmartHomeProject.Controllers
 
     public class HouseAreaAPIController : ApiController
     {
+
         private SmartHomeDataModelContainer db = new SmartHomeDataModelContainer();
 
         // GET: api/HouseAreaAPI
+        [Route("api/HouseAreaAPi")]
         public IQueryable<HouseArea> GetHouseAreas()
         {
             return db.HouseAreas;

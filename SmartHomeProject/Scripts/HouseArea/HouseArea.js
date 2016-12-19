@@ -3,15 +3,25 @@ var houseAreas = [];
 var inputName;
 
 var rooms = [
-    "bathroom",
-    "kitchen",
-    "livingroom",
-    "bedroom"
+    "Livingroom",
+    "Bedroom",
+    "Bathroom",
+    "Kitchen"
 ]
 
 $(document).ready(function () {
+   
     GetHouseArea();
 
+    //$('#light-switch-Livingroom').change(function () {
+    //    findHouseArea(room)
+    //    if ($(this).is(':checked')) {
+    //        updateHouseArea(room, true);
+    //    }
+    //    else {
+    //        updateHouseArea(room, false)
+    //    }
+    //});
     console.log("ready!");
     var hubbie = $.connection.myHub;
     $.connection.hub.logging = true;
@@ -23,21 +33,31 @@ $(document).ready(function () {
         var on = " : lights are ON";
         var off = " : lights are OFF";
         if (status == "on") {
-            $("#lightSwitch-" + room).text(room);
-            $("#lightSwitch-" + room).append(on);
+            $("#text-" + room).text(room);
+            $("#text-" + room).append(on);
+            //$('#light-switch-' + room).val(true);
+            //var id = "#light-switch-" + room;
+            //document.getElementById("light-switch-" + room).checked = true;
+            $('#light-switch-' + room).prop('checked', true);
+            
         }
-        else
-            $("#lightSwitch-" + room).text(room);
-        $("#lightSwitch-" + room).append(off);
+        else {
+            $("#text-" + room).text(room);
+            $("#text-" + room).append(off);
+            //$('#light-switch-' + room).val(false);
+            //document.getElementById("light-switch-" + room).checked = false;
+            $('#light-switch-' + room).prop('checked', false);
+        }
+        
     };
-
     $.connection.hub.start();
+    
 });
 
 function GetHouseArea() {
     jQuery.support.cors = true;
     $.ajax({
-        url: 'http://localhost:53046/api/HouseAreaAPI/',
+        url: 'http://localhost:53046/api/HouseAreaAPI',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -129,20 +149,22 @@ function AddHouseArea() {
 //    });
 //}
 
-function DeleteHouseArea() {
-    jQuery.support.cors = true;
-    var id = $('#txtDelHouseAreaId').val();
+//function DeleteHouseArea() {
+//    jQuery.support.cors = true;
+//    var id = $('#deleteId').val();
 
-    $.ajax({
-        url: 'http://localhost:53046/api/HouseAreaAPI/' + id,
-        type: 'DELETE',
-        contentType: "application/json;charset=utf-8",
-        success: function (data) {
-            WriteResponse(data);
-        },
-        error: function (x, y, z) {
-            alert(x + '\n' + y + '\n' + z);
-        }
-    });
-}
+//    $.ajax({
+//        url: 'http://localhost:53046/api/HouseAreaAPI/' + id,
+//        type: 'DELETE',
+//        contentType: "application/json;charset=utf-8",
+//        success: function (data) {
+//            GetHouseArea();
+//            console.log(houseAreas);
+//            //WriteResponse(data);
+//        },
+//        error: function (x, y, z) {
+//            alert(x + '\n' + y + '\n' + z);
+//        }
+//    });
+//}
 
