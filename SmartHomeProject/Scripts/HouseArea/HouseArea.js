@@ -2,9 +2,36 @@
 var houseAreas = [];
 var inputName;
 
-$(document).ready(function () {
+var rooms = [
+    "bathroom",
+    "kitchen",
+    "livingroom",
+    "bedroom"
+]
 
+$(document).ready(function () {
     GetHouseArea();
+
+    console.log("ready!");
+    var hubbie = $.connection.myHub;
+    $.connection.hub.logging = true;
+    hubbie.client.sendServerTime = function (serverTime) {
+        $("#newTime").text(serverTime);
+    };
+    hubbie.client.lightsOn = function (roomIndex, status) {
+        var room = rooms[roomIndex];
+        var on = " : lights are ON";
+        var off = " : lights are OFF";
+        if (status == "on") {
+            $("#lightSwitch-" + room).text(room);
+            $("#lightSwitch-" + room).append(on);
+        }
+        else
+            $("#lightSwitch-" + room).text(room);
+        $("#lightSwitch-" + room).append(off);
+    };
+
+    $.connection.hub.start();
 });
 
 function GetHouseArea() {
@@ -118,3 +145,4 @@ function DeleteHouseArea() {
         }
     });
 }
+
