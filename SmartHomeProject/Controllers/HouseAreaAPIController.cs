@@ -39,6 +39,7 @@ namespace SmartHomeProject.Controllers
         }
 
         // PUT: api/HouseAreaAPI/5
+        //[Route("api/HouseAreaAPi/{Name:alpha}")]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutHouseArea(int id, HouseArea houseArea)
         {

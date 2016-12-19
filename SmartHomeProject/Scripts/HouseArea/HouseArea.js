@@ -33,9 +33,8 @@ function findHouseArea(inputName) {
 
 function updateHouseArea(areaName, lightsOn, floorHeating, alarm) {
     jQuery.support.cors = true;
-    GetHouseArea();
     findHouseArea(areaName); //gives us house area from db that we stored in array up there
-    houseArea = {
+    var thisHouseArea = {
         Id: houseArea.Id,
         AreaName: areaName,
         LightsOn: lightsOn.is(':checked'),
@@ -45,7 +44,7 @@ function updateHouseArea(areaName, lightsOn, floorHeating, alarm) {
     $.ajax({
         url: 'http://localhost:53046/api/HouseAreaAPI/' + houseArea.Id,
         type: 'PUT',
-        data: JSON.stringify(houseArea),
+        data: JSON.stringify(thisHouseArea),
         contentType: 'application/json; charset=utf-8',
         success: function (data) {
             alert("area updated");
